@@ -51,6 +51,9 @@ public class ControladorCadastroUsuario implements Initializable {
 
     @FXML
     private Pane pane;
+    
+     @FXML
+    private Button btnVoltar;
 
     @FXML
     void cadastrarUsuario(ActionEvent event) {
@@ -71,6 +74,10 @@ public class ControladorCadastroUsuario implements Initializable {
 
     }
 
+    @FXML
+    void voltar(ActionEvent event) {
+        Principal.changeScreen("login");
+    }
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO

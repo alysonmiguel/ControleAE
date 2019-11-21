@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
@@ -11,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.ControladorEx">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.ControladorEx">
    <children>
       <TableView fx:id="tabela" layoutX="27.0" layoutY="180.0" prefHeight="200.0" prefWidth="550.0">
         <columns>
@@ -24,7 +20,7 @@
       <Button fx:id="btnVoltar" layoutX="27.0" layoutY="126.0" mnemonicParsing="false" onAction="#voltar" prefHeight="25.0" prefWidth="149.0" text="Voltar" />
       <Button fx:id="btnCadastro" layoutX="211.0" layoutY="126.0" mnemonicParsing="false" onAction="#cadastrar" prefHeight="25.0" prefWidth="149.0" text="Cadastrar" />
       <Button fx:id="btnBuscar" layoutX="385.0" layoutY="126.0" mnemonicParsing="false" onAction="#buscar" prefHeight="25.0" prefWidth="149.0" text="Buscar" />
-      <Label layoutX="219.0" prefHeight="51.0" prefWidth="198.0" text="Extintor">
+      <Label layoutX="226.0" layoutY="14.0" prefHeight="51.0" prefWidth="198.0" text="Extintor">
          <font>
             <Font size="35.0" />
          </font>

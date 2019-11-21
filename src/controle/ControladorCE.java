@@ -16,6 +16,7 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import main.Principal;
 import modelo.Extintor;
+import persistencia.ExtintorDAO;
 
 /**
  * FXML Controller class
@@ -24,7 +25,8 @@ import modelo.Extintor;
  */
 public class ControladorCE implements Initializable {
 
-     
+    private ExtintorDAO extintorDao = new ExtintorDAO();
+
     @FXML
     private TextField lblTipo;
 
@@ -45,13 +47,17 @@ public class ControladorCE implements Initializable {
 
     @FXML
     void salvar(ActionEvent event) {
+        Extintor e = new Extintor(Date.valueOf(lblValidade.getValue()), lblSetor.getText(), lblTipo.getText(), Integer.parseInt(lblPeso.getText()), 1);
 
+        extintorDao.insertExtintor(e);
+        
+        Principal.changeScreen("ex");
     }
 
     @FXML
     void voltar(ActionEvent event) {
-        
-       Principal.changeScreen("ex");
+
+        Principal.changeScreen("ex");
     }
 
     @Override

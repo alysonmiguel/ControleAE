@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="ControleAE.jar" size="20535" download="eager" />
+    <jar href="ControleAE.jar" size="20932" download="eager" />
     <jar href="lib\h2-1.4.196.jar" size="1821940" download="eager" />
     <jar href="lib\jfoenix-8.0.8.jar" size="2708772" download="eager" />
   </resources>

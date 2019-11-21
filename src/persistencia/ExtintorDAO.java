@@ -20,7 +20,7 @@ public class ExtintorDAO {
 
     private final String INSERTEXTINTOR = "INSERT INTO  EXTINTOR (TIPO, PESO, VALIDADE, SETOR, ID_USUARIO) VALUES (?, ?, ?, ?, ?)";
 
-    public boolean insertUsuario(Extintor e) {
+    public boolean insertExtintor(Extintor e) {
         try {
             // CONECTA
             con.conecta();

@@ -44,7 +44,7 @@ public class Principal extends Application {
         extintor = new Scene(fxmlExtintor, 640, 400);
 
         Parent fxmlCadastroExtintor = FXMLLoader.load(getClass().getResource("/visao/CadastroExtintor.fxml"));
-        cadastroExtintor = new Scene(fxmlCadastroExtintor, 640, 400);
+        cadastroExtintor = new Scene(fxmlCadastroExtintor, 700, 500);
 
         stageP.setScene(login);
         stageP.show();
