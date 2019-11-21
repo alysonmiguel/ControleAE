@@ -18,6 +18,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import main.Principal;
 import modelo.Extintor;
 import modelo.Usuario;
 import persistencia.ExtintorDAO;
@@ -28,13 +29,13 @@ import persistencia.ExtintorDAO;
  * @author Aluno
  */
 public class ControladorEx implements Initializable {
- 
+
     private Extintor extintorEdit = new Extintor();
-    
+
     private ObservableList<Extintor> extintores = FXCollections.observableArrayList();
-    
+
     private ExtintorDAO extintorDAO = new ExtintorDAO();
-    
+
     @FXML
     private TableView<Extintor> tabela;
 
@@ -66,12 +67,12 @@ public class ControladorEx implements Initializable {
 
     @FXML
     void cadastrar(ActionEvent event) {
-
+        Principal.changeScreen("CE");
     }
 
     @FXML
     void voltar(ActionEvent event) {
-
+        Principal.changeScreen("menu");
     }
 
     @Override
@@ -107,7 +108,7 @@ public class ControladorEx implements Initializable {
             colunaPeso.setText(String.valueOf(extintorEdit.getPeso()));
             colunaPeso.setText(extintorEdit.getSetor());
             colunaValidade.setText(String.valueOf(extintorEdit.getValidade()));
-            
+
         });
 
     }

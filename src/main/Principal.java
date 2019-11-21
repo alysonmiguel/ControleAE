@@ -21,6 +21,7 @@ public class Principal extends Application {
     private static Scene menu;
     private static Scene arCondicionado;
     private static Scene extintor;
+    private static Scene cadastroExtintor;
 
     @Override
     public void start(Stage stageP) throws Exception {
@@ -41,6 +42,9 @@ public class Principal extends Application {
 
         Parent fxmlExtintor = FXMLLoader.load(getClass().getResource("/visao/Extintor.fxml"));
         extintor = new Scene(fxmlExtintor, 640, 400);
+
+        Parent fxmlCadastroExtintor = FXMLLoader.load(getClass().getResource("/visao/CadastroExtintor.fxml"));
+        cadastroExtintor = new Scene(fxmlCadastroExtintor, 640, 400);
 
         stageP.setScene(login);
         stageP.show();
@@ -63,6 +67,9 @@ public class Principal extends Application {
                 break;
             case "ex":
                 stage.setScene(extintor);
+                break;
+            case "CE":
+                stage.setScene(cadastroExtintor);
                 break;
 
         }

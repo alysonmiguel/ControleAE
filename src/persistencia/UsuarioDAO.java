@@ -12,7 +12,6 @@ public class UsuarioDAO {
     private final String INSERTUSUARIO = "INSERT INTO USUARIO (NOME, EMAIL, FUNCAO, USUARIO, SENHA ) VALUES (?,?,?,?,?)";
     private final String LOGIN = "SELECT USUARIO FROM USUARIO  WHERE USUARIO =  ? and  SENHA =  ?";
 
-  
     public boolean insertUsuario(Usuario u) {
         try {
             // CONECTA
@@ -43,7 +42,7 @@ public class UsuarioDAO {
         }
     }
 
-    public boolean login(Usuario u) {
+ public boolean login(Usuario u) {
         boolean resultado = false;
         try {
             // CONECTA
