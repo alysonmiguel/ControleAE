@@ -1,0 +1,14 @@
+AnchorPane {
+-fx-background-color: gray ;
+}
+.Label {
+    
+    -fx-font-size: 27px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+   
+}
+Button {
+    -fx-background-color: black;
+    -fx-text-fill: white;
+}

@@ -5,6 +5,7 @@
  */
 package modelo;
 
+import java.sql.Date;
 import javafx.scene.chart.PieChart.Data;
 
 /**
@@ -13,23 +14,35 @@ import javafx.scene.chart.PieChart.Data;
  */
 public class ArCondicionado {
     
-    private String modelo, setor;
+    private String modelo, setor,fabricante;
     private int despesas, idArCondicionado;
-    private Data datafabricacao;
+    private Date datafabricacao;
 
-    public ArCondicionado(String modelo, String setor, int despesas, Data datafabricacao) {
+    public ArCondicionado() {
+       
+    }
+
+    public String getFabricante() {
+        return fabricante;
+    }
+
+    public void setFabricante(String fabricante) {
+        this.fabricante = fabricante;
+    }
+
+    public ArCondicionado(String modelo, String setor, int despesas, Date datafabricacao) {
         this.modelo = modelo;
         this.setor = setor;
         this.despesas = despesas;
         this.datafabricacao = datafabricacao;
     }
 
-    public ArCondicionado(String modelo, String setor, int despesas, int idArCondicionado, Data datafabricacao) {
+    public ArCondicionado(String modelo, String setor, int despesas,String fabricante, Date datafabricacao) {
         this.modelo = modelo;
         this.setor = setor;
         this.despesas = despesas;
-        this.idArCondicionado = idArCondicionado;
         this.datafabricacao = datafabricacao;
+        this.fabricante = fabricante;
     }
 
     public String getModelo() {
@@ -64,11 +77,11 @@ public class ArCondicionado {
         this.idArCondicionado = idArCondicionado;
     }
 
-    public Data getDatafabricacao() {
+    public Date getDatafabricacao() {
         return datafabricacao;
     }
 
-    public void setDatafabricacao(Data datafabricacao) {
+    public void setDatafabricacao(Date datafabricacao) {
         this.datafabricacao = datafabricacao;
     }
     

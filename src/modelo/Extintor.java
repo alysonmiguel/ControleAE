@@ -26,26 +26,14 @@ public class Extintor {
     }
     
     
-    
-    
-/*
-    public Extintor(Date validade, String setor, String tipo, int peso) {
+    public Extintor(Date validade, String setor, String tipo, int peso, int idUsuario, int idExtintor) {
         this.validade = validade;
         this.setor = setor;
         this.tipo = tipo;
         this.peso = peso;
+        this.idUsuario = idUsuario;
     }
-
-    public Extintor(Date validade, String setor, String tipo, int peso, int idExtintor) {
-        this.validade = validade;
-        this.setor = setor;
-        this.tipo = tipo;
-        this.peso = peso;
-        this.idExtintor = idExtintor;
-    }
-
-    
-   */
+   
     
     
     

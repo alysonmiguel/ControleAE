@@ -42,8 +42,8 @@ public class UsuarioDAO {
         }
     }
 
- public boolean login(Usuario u) {
-        boolean resultado = false;
+ public Usuario login(Usuario u) {
+        Usuario user = null;
         try {
             // CONECTA
             con.conecta();
@@ -59,7 +59,10 @@ public class UsuarioDAO {
             // EXECUTA A INSTRUCAO
             ResultSet rs = preparaInstrucao.executeQuery();
 
-            resultado = rs.next();
+            if(rs.next()){
+                
+                user =  u;
+            }
 
             // DESCONECTA
             con.desconecta();
@@ -67,7 +70,7 @@ public class UsuarioDAO {
             System.out.println("erro " + e);
 
         }
-        return resultado;
+        return user;
     }
 
 }

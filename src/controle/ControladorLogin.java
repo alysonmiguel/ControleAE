@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package controle;
 
 import java.net.URL;
@@ -20,12 +16,13 @@ import javafx.scene.layout.Pane;
 
 import main.Principal;
 import modelo.Usuario;
+import persistencia.DataSingleton;
 import persistencia.UsuarioDAO;
 
 /**
  * FXML Controller class
  *
- * @author Alyson
+ * @author Leonardo
  */
 public class ControladorLogin implements Initializable {
 
@@ -53,13 +50,22 @@ public class ControladorLogin implements Initializable {
     void cadastrar(ActionEvent event) {
         Principal.changeScreen("cadastro");
     }
-
+     @FXML
+    void limpar(ActionEvent event) {
+        txtUsuario.clear();
+        txtSenha.clear();
+    }
+    @FXML
+    void voltar(ActionEvent event) {
+   Principal.changeScreen("menu");
+    }
     @FXML
     void login(ActionEvent event) {
         Usuario u = new Usuario(txtUsuario.getText(), Integer.parseInt(txtSenha.getText()));
 
-        if (usuarioDAO.login(u)) {
+        if (usuarioDAO.login(u) != null) {
             System.out.println("Login ");
+            DataSingleton.getInstance().setUser(u);
             Principal.changeScreen("menu");
 
         } else {

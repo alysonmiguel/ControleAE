@@ -1,15 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.ControladorAc">
+<AnchorPane id="AnchorPane" prefHeight="470.0" prefWidth="852.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.ControladorAc">
    <children>
-      <Label layoutX="200.0" layoutY="114.0" prefHeight="43.0" prefWidth="273.0" text="Ar-condicionado">
+      <Label layoutX="177.0" layoutY="69.0" prefHeight="43.0" prefWidth="314.0" stylesheets="@stylextintor.css" text="AR - CONDICIONADO">
          <font>
             <Font size="29.0" />
          </font>
       </Label>
+      <ImageView fitHeight="113.0" fitWidth="86.0" layoutX="76.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icon/833934_machine_512x512.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tabela" layoutX="14.0" layoutY="176.0" prefHeight="200.0" prefWidth="502.0" stylesheets="@style.css">
+         <columns>
+            <TableColumn fx:id="colunaModelo" prefWidth="88.0" text="MODELO" />
+            <TableColumn fx:id="colunaFabricacao" prefWidth="93.0" text="FABRICAÇÃO" />
+            <TableColumn fx:id="colunaSetor" prefWidth="98.0" text="SETOR" />
+            <TableColumn fx:id="colunaValidade" prefWidth="119.0" text="VALIDADE" />
+            <TableColumn fx:id="colunaDespesas" prefWidth="119.0" text="DESPESAS" />
+         </columns>
+      </TableView>
+      <Button fx:id="lblVoltar" layoutX="656.0" layoutY="351.0" mnemonicParsing="false" onAction="#voltar" text="VOLTAR" />
+      <Button fx:id="lblCadastro" layoutX="732.0" layoutY="351.0" mnemonicParsing="false" onAction="#cadastrar" text="CADASTRAR" />
+      <Label layoutX="588.0" layoutY="91.0" text="CADASTRO DE AR-CONDICIONADO" />
+      <TextField fx:id="lblDespesas" layoutX="666.0" layoutY="221.0" />
+      <TextField fx:id="lblSetor" layoutX="666.0" layoutY="180.0" />
+      <TextField fx:id="lblModelo" layoutX="666.0" layoutY="137.0" />
+      <Label layoutX="601.0" layoutY="141.0" text="MODELO" />
+      <Label layoutX="616.0" layoutY="184.0" text="SETOR" />
+      <Label layoutX="535.0" layoutY="297.0" text="DATA FABRICAÇÃO" />
+      <Label layoutX="597.0" layoutY="225.0" text="DESPESAS" />
+      <DatePicker fx:id="DateFabricacao" layoutX="661.0" layoutY="293.0" prefHeight="25.0" prefWidth="160.0" />
+      <TextField fx:id="lblFabricante" layoutX="666.0" layoutY="257.0" />
+      <Label layoutX="579.0" layoutY="260.0" text="FABRICANTE" />
    </children>
 </AnchorPane>

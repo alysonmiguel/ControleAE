@@ -12,7 +12,12 @@ public class Usuario {
         this.funcao = funcao;
         this.login = login;
     }
-
+    
+public Usuario(int idUsuario, int senha,String login) {
+        this.idUsuario = idUsuario;
+        this.senha = senha;
+        this.nome = nome;
+}
     public Usuario(int idUsuario, int senha, String nome, String email, String funcao, String login) {
         this.idUsuario = idUsuario;
         this.senha = senha;

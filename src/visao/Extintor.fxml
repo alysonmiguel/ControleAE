@@ -1,29 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.ControladorEx">
+<AnchorPane id="AnchorPane" prefHeight="529.0" prefWidth="852.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controle.ControladorEx">
    <children>
-      <TableView fx:id="tabela" layoutX="27.0" layoutY="180.0" prefHeight="200.0" prefWidth="550.0">
+      <TableView fx:id="tabela" layoutX="63.0" layoutY="126.0" prefHeight="359.0" prefWidth="411.0" stylesheets="@style.css">
         <columns>
-          <TableColumn fx:id="colunaTipo" prefWidth="88.0" text="Tipo" />
-            <TableColumn fx:id="colunaPeso" prefWidth="93.0" text="Peso" />
-            <TableColumn fx:id="colunaSetor" prefWidth="98.0" text="Setor" />
-            <TableColumn fx:id="colunaValidade" prefWidth="119.0" text="Validade" />
+          <TableColumn fx:id="colunaTipo" prefWidth="88.0" text="TIPO" />
+            <TableColumn fx:id="colunaPeso" prefWidth="93.0" text="PESO" />
+            <TableColumn fx:id="colunaSetor" prefWidth="98.0" text="SETOR" />
+            <TableColumn fx:id="colunaValidade" prefWidth="119.0" text="VALIDADE" />
         </columns>
       </TableView>
-      <Button fx:id="btnVoltar" layoutX="27.0" layoutY="126.0" mnemonicParsing="false" onAction="#voltar" prefHeight="25.0" prefWidth="149.0" text="Voltar" />
-      <Button fx:id="btnCadastro" layoutX="211.0" layoutY="126.0" mnemonicParsing="false" onAction="#cadastrar" prefHeight="25.0" prefWidth="149.0" text="Cadastrar" />
-      <Button fx:id="btnBuscar" layoutX="385.0" layoutY="126.0" mnemonicParsing="false" onAction="#buscar" prefHeight="25.0" prefWidth="149.0" text="Buscar" />
-      <Label layoutX="226.0" layoutY="14.0" prefHeight="51.0" prefWidth="198.0" text="Extintor">
+      <Button fx:id="btnVoltar" layoutX="498.0" layoutY="401.0" mnemonicParsing="false" onAction="#voltar" prefHeight="25.0" prefWidth="149.0" stylesheets="@style.css" text="VOLTAR" />
+      <Button fx:id="btnCadastro" layoutX="670.0" layoutY="400.0" mnemonicParsing="false" onAction="#cadastrar" prefHeight="25.0" prefWidth="149.0" stylesheets="@style.css" text="CADASTRAR" />
+      <Label layoutX="217.0" layoutY="38.0" prefHeight="51.0" prefWidth="198.0" stylesheets="@stylextintor.css" text="EXTINTORES">
          <font>
             <Font size="35.0" />
          </font>
       </Label>
+      <ImageView fitHeight="78.0" fitWidth="76.0" layoutX="123.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@icon/377407.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblCadastro" layoutX="587.0" layoutY="84.0" prefHeight="34.0" prefWidth="217.0" text="CADASTRO DE EXTINTORES">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <TextField fx:id="lblTipo" layoutX="632.0" layoutY="152.0" />
+      <Label layoutX="557.0" layoutY="156.0" text="TIPO">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="lblPeso" layoutX="632.0" layoutY="194.0" />
+      <Label layoutX="557.0" layoutY="196.0" text="PESO">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="544.0" layoutY="286.0" text="VALIDADE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="lblSetor" layoutX="632.0" layoutY="240.0" />
+      <Label layoutX="556.0" layoutY="242.0" text="SETOR">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="lblValidade" layoutX="633.0" layoutY="284.0" prefHeight="25.0" prefWidth="149.0" />
+      <Button fx:id="btnEditar" layoutX="670.0" layoutY="352.0" mnemonicParsing="false" onAction="#editar" prefHeight="25.0" prefWidth="149.0" stylesheets="@style.css" text="EDITAR" />
+      <Button fx:id="btnRemover" layoutX="498.0" layoutY="352.0" mnemonicParsing="false" onAction="#remover" prefHeight="25.0" prefWidth="149.0" stylesheets="@style.css" text="REMOVER" />
    </children>
 </AnchorPane>
